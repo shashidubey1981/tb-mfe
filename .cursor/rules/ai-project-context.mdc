@@ -1,0 +1,27 @@
+---
+description: tb-mfe project context and conventions (see root AI.md for full guide)
+alwaysApply: true
+---
+
+# tb-mfe – AI project context
+
+Read **AI.md** at the project root for the full guide. Summary:
+
+## Stack and structure
+
+- Next.js 16 App Router, React 19, TypeScript, next-intl, Contentstack API, SASS, `@MensWearhouse/kairos-fabric`.
+- Locale segment: `app/[locale]/`. Routes: `c/` (categories), `p/` (products), `search/`, `shop/`, `slc/` (static). Components: `app/[locale]/components/`. Types: `types/`. Contentstack: `lib/contentstack/`.
+
+## Conventions to follow
+
+- **Components**: Functional components; folder with `ComponentName.tsx` + `index.ts` re-export. Use `next/dynamic` for heavy/below-fold components (see `RenderComponents/index.tsx`).
+- **Types**: Use and extend types in `types/` (e.g. `types/components.ts`, `types/pages/`) before introducing new ad-hoc types.
+- **Imports**: Use `@/` for app-root imports (e.g. `@/lib/debug`, `@/types`).
+- **New CMS component**: Add type in `types/components.ts` (and page block in `types/pages/`), implement under `app/[locale]/components/<Name>/`, register in `app/[locale]/components/RenderComponents/index.tsx`.
+- **Logging**: Use `@/lib/debug`; errors via segment `error.tsx` or root `global-error.tsx`.
+
+## Commands
+
+`npm run dev` | `lint` / `lint:fix` | `format` / `format:check` | `type-check` | `npm test` (Playwright).
+
+When making changes, follow the patterns in RenderComponents, `lib/contentstack`, and existing `app/[locale]/` routes, and keep AI.md in mind for where to add new code.
