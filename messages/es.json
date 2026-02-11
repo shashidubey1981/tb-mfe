@@ -1,0 +1,29 @@
+{
+  "common": {
+    "welcome": "Bienvenido a TB Discovery",
+    "home": "Inicio",
+    "search": "Buscar",
+    "cart": "Carrito",
+    "account": "Cuenta",
+    "signIn": "Iniciar Sesión",
+    "signOut": "Cerrar Sesión"
+  },
+  "product": {
+    "addToCart": "Agregar al Carrito",
+    "outOfStock": "Agotado",
+    "selectSize": "Seleccionar Talla",
+    "selectColor": "Seleccionar Color"
+  },
+  "category": {
+    "filters": "Filtros",
+    "sortBy": "Ordenar Por",
+    "results": "Resultados"
+  },
+  "error": {
+    "notFound": "Página no encontrada",
+    "pageNotFound": "La página que buscas no existe",
+    "productNotFound": "Producto no encontrado",
+    "categoryNotFound": "Categoría no encontrada",
+    "goHome": "Ir al Inicio"
+  }
+}
