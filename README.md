@@ -1,6 +1,8 @@
-# TB Discovery
+# tb-discovery
 
-Next.js 16 catalog application with internationalization.
+Next.js 16 catalog application with internationalization (React 19, TypeScript, next-intl, Contentstack).
+
+For project context and conventions used by AI assistants and developers, see **[AI.md](./AI.md)**.
 
 ## Getting Started
 
@@ -227,4 +229,5 @@ Copy `.env.example` to `.env.local` and configure:
 
 ```bash
 GITHUB_TOKEN=your_token_here
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8080   # Contentstack API (optional; defaults to 8080)
 ```
